@@ -1,0 +1,14 @@
+---
+- name: My first play
+  hosts: slaves
+  become_user: ansible
+  tasks:
+   - name: add hazem user 
+     ansible.builtin.user:
+       name: hazem
+       shell: /bin/bash
+       create_home: yes
+       groups: adm,sudo
+       append: yes
+
+        #   - name: 
